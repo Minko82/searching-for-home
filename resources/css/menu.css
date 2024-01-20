@@ -1,0 +1,63 @@
+/* Menu overlay */
+
+.menuBtn {
+    cursor: pointer; 
+    position: fixed;
+    margin: 45px 0 0 1800px;  /* top, bottom, right, left */
+    z-index: 1; /* 1--> on top, 0 --> bottom*/
+    font-size: 30px; 
+    border: none; 
+    background-color: inherit; 
+    color: var(--textColor); 
+    text-shadow:  0 0 25px var(--mainGlow); 
+  }
+  
+.menuBtn:hover {
+    text-shadow:  0 0 30px var(--accentGlow); 
+}
+  
+/* Menu Background */
+.menuPopup {
+    height: 100%;
+    width: 0;
+    position: fixed; 
+    z-index: 56; /* 1--> on top, 0 --> bottom*/
+    right: 0;
+    top: 0;
+    background-color: rgba(0,0,0, 0.97);
+    overflow-x: hidden; /* Disables scroll */
+    transition: 0.5s; /*Time it takes to complete animation */
+}
+  
+/* Contents inside the menu*/
+.menuPopup-content {
+    position: relative;
+    top: 25%; 
+    width: 100%; 
+    text-align: center; 
+    margin-top: 30px; 
+}
+  
+/* The navigation links inside the menu */
+.menuPopup a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: var(--mainGlow);
+    display: block;
+    transition: 0.3s; 
+}
+  
+/* :focus is for people without a mouse who using tab to navigate */
+.menuPopup a:hover, .menuPopup a:focus {
+    color: var(--accentGlow);
+    text-shadow: var(--accentGlow) 1px 0 13px;
+}
+  
+/* Close button */
+.menuPopup .closebtn {
+    position: absolute;
+    top: 30px;
+    right: 65px;
+    font-size: 60px;
+}

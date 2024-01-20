@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Exernal Resources -->
+  <!-- Icon Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- Custom CSS and JS -->
+  <link rel="stylesheet" href="../../resources/css/homePage.css">
+  <link rel="stylesheet" href="../../resources/css/playBtn.css">
+  <link rel="stylesheet" href="../../resources/css/menu.css">
+  <link rel="stylesheet" href="../../resources/css/starryBkg.css">
+  <script src="../../resources/js/menu.js"></script>
+
+  <title>Home</title>
+  <link rel="icon" type="image/png" href="../../resources/img/favicon.png" />
+
+</head>
+
+<body>
+
+  <!-- Starry Background -->
+  <div id='stars'></div>
+
+
+  <!-- Menu Button -->
+  <div id="menu" class="menuPopup">
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+    <!-- Overlay content -->
+    <div class="menuPopup-content">
+      <a href="Index.html">HOME</a>
+      <a href="character.html">PLAY</a>
+      <a href="about.html">ABOUT</a>
+      <a href="qa.html">SOURCES</a>
+      <a href="qa.html">Q&A</a>
+    </div>
+
+  </div>
+
+  <button class="menuBtn"  onclick="openNav()"><i class="fa fa-bars"></i></button>
+
+<!-- Title Text -->
+  <section class="container">
+
+    <div class="center homePageTitleMed">
+      <p>Searching for</p>
+    </div>
+
+    <div class="center homePageTitleBig">
+      <p>Home</p>
+    </div>
+
+    <!-- Play Button -->
+    <div class="center buttonLocation">
+      <a href="character.html"> 
+        <button class='playBtn'>
+          <span class='glowing-txt'>P<span class='faulty-letter'>L</span>AY</span>
+        </button>
+      </a>
+    
+    </div>
+  </section>
+
+  </body>
+
+</html>
+<!-- Logo -->
+<a href="Index.html"><img style="margin-top: 1%; width: 5.5%; height: auto;" class="logo" src="../../resources/img/favicon.png" alt="" /></a>

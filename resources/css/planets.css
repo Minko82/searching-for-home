@@ -1,0 +1,103 @@
+.bkgPic {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  z-index: 20;
+}
+
+#popup {
+  display: none;
+  position: fixed;
+  padding: 5px;
+  background-color: white;
+  border: 1px solid black;
+  z-index: -1; /* Initially set z-index to -1 */
+  font-family: 'Courier New', Courier, monospace; /* Matching the website's font */
+}
+
+.rockPic {
+  position: absolute;
+  top: 70%;  /* Adjust as needed */
+  left: 50%; /* Adjust as needed */
+  transform: translate(-50%, -50%); /* Center the image */
+  width: 5%; /* Adjust as needed */
+  height: auto;
+  z-index: 30;
+}
+
+.leaveBtn {
+  /* Styling the text: */
+  font-size: 25px;
+  font-weight: 750;
+  letter-spacing: 10px; 
+  color:black;
+  font-family: var(--font);
+  z-index: 40;
+ 
+  border-radius: 10px;  /* Adds curve to border corners */
+  
+  border: 3.75px solid var(--mainGlow); /* Border thickness, line style, color*/
+   
+  box-shadow: inset 0px 0px 10px 0px var(--mainGlow),
+     0px 0px 10px 0px var(--mainGlow);
+   
+  margin: 600% 0 0 980%;
+  background: var(--mainGlow); 
+  cursor: pointer; 
+  position: relative;
+  padding: 10% 23%;
+}
+
+.inhabitBtn {
+  /* Styling the text: */
+  font-size: 25px;
+  font-weight: 750;
+  letter-spacing: 10px; 
+  color:black;
+  font-family: var(--font);
+  z-index: 50;
+ 
+  border-radius: 10px;  /* Adds curve to border corners */
+  
+  border: 3.75px solid rgb(112, 238, 140); /* Border thickness, line style, color*/
+
+  box-shadow: inset 0px 0px 10px 0px rgb(112, 238, 140),
+     0px 0px 10px 0px rgb(112, 238, 140);
+   
+  margin: 786px 0 0 1500px;
+  background:rgb(112, 238, 140);
+  cursor: pointer; 
+  position: absolute;
+  padding:12px 20px;
+}
+
+.inhabitBtn:hover {
+
+  color:rgb(112, 238, 140);
+  border-radius: 10px;  /* Adds curve to border corners */
+  
+  border: 3.75px solid rgb(112, 238, 140); /* Border thickness, line style, color*/
+   
+  box-shadow: inset 0px 0px 10px 0px rgb(112, 238, 140),
+     0px 0px 10px 0px rgb(112, 238, 140);
+  background: black; 
+}
+
+.leaveBtn:hover {
+  color: var(--mainGlow);
+
+  border-radius: 10px;  /* Adds curve to border corners */
+  
+  border: 3.75px solid var(--mainGlow); /* Border thickness, line style, color*/
+  perspective: 60px;
+   
+  box-shadow: inset 0px 0px 10px 0px var(--mainGlow),
+     0px 0px 10px 0px var(--mainGlow);
+
+  background: black; 
+  cursor: pointer; 
+
+
+}

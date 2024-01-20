@@ -1,0 +1,191 @@
+/* Inspired by: https://codepen.io/utilitybend */
+
+article {
+    --img-scale: 1.004;
+    --title-color: var(--textColor);
+
+    position: relative;
+    border-radius: 16px;
+    background: black;
+    transform-origin: center;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 10px 0px var(--mainGlow),
+    0px 0px 10px 0px var(--mainGlow);
+  }
+  
+  article a::after {
+    inset-block: 0;
+    inset-inline: 0;
+    cursor: pointer;
+    box-shadow: 0 0 32px 3.2px var(--mainGlow);
+  }
+  
+  article h2 {
+    margin: 0 0 18px 0;
+    font-size: 1.83rem;
+    font-weight: bold;
+    letter-spacing: 0.06em;
+    color: var(--title-color);
+    transition: color 0.3s ease-out;
+  }
+
+  article p {
+    font-weight: bold;
+    color: var(--textColor);
+    font-size: 20px;
+    z-index: 3;
+    /* Space between lines */
+    line-height: .5;
+  }
+
+  .info {
+    font-weight: bold;
+    color:var(--accentGlow);
+    font-size: 22px;
+    z-index: 3;
+    /* Space between lines */
+    line-height: .5;
+
+  }
+  
+  figure {
+    margin: 0;
+    padding: 0;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+  
+  article img {
+    max-width: 100%;
+    transform-origin: center;
+    transform: scale(var(--img-scale));
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .article-body {
+    padding: 24px;
+  }
+  
+  article a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--accentGlow);
+    z-index: -2;
+  }
+
+  article:has(:hover, :focus) {
+    --img-scale: 1.1;
+    --title-color: #FF0204;
+    box-shadow: 0 0 32px 3.2px var(--mainGlow);
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  .articles {
+    display: grid;
+    /* Card width */
+    max-width: 1800px;
+    margin-inline: auto;
+    padding-inline: 24px;
+    /* How many cards per row */
+    grid-template-columns: repeat(auto-fill, minmax(calc(25% - 24px), 1fr));
+    /* Gap between the cards */
+    gap: 30px;
+    margin-top: 3%;
+  }
+
+
+  .charButton {
+    font-size: 22px;
+    font-weight: 750;
+    letter-spacing: 10px; 
+    color: var(--mainGlow);
+    font-family: var(--font);
+    text-align: center;
+
+    border-radius: 10px;  /* Adds curve to border corners */
+  
+    border: 3.75px solid var(--accentGlow); /* Border thickness, line style, color*/
+        
+    margin-top: 45px;
+    background: none; 
+    cursor: pointer; 
+    position: relative;
+    padding: 13px 42px;
+
+  }
+  .charButton:hover {
+    font-size: 22px;
+    font-weight: 750;
+    color: var(--accentGlow);
+    font-family: var(--font);
+    text-align: center;
+
+    border-radius: 10px;  /* Adds curve to border corners */
+  
+    border: 3.75px solid var(--accentGlow); /* Border thickness, line style, color*/
+    perspective: 60px;
+    
+    box-shadow: inset 0px 0px 10px 0px var(--accentGlow),
+      0px 0px 10px 0px var(--accentGlow);
+    
+    margin-top: 45px;
+    background: none; 
+    cursor: pointer; 
+    position: relative;
+    padding: 13px 42px;
+
+  }
+
+
+
+  .charPics {
+    width: 100px; /* Set the desired width */
+    height: auto; /* Maintain the aspect ratio */
+  }
+  
+  @media screen and (max-width: 960px) {
+    article {
+      container: card/inline-size;
+    }
+    .article-body p {
+      display: none;
+    }
+  }
+  
+  @container card (min-width: 380px) {
+    .article-wrapper {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 16px;
+    }
+    .article-body {
+      padding-left: 0;
+    }
+    figure {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    figure img {
+      height: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+    }
+  }
+  
+  .sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+  }

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- External Resources -->
+    <!-- Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Custom CSS and JS -->
+    <link rel="stylesheet" href="../../resources/css/homePage.css">
+    <link rel="stylesheet" href="../../resources/css/menu.css">
+    <link rel="stylesheet" href="../../resources/css/starryBkg.css">
+    <link rel="stylesheet" href="../../resources/css/Q and A.css">
+    <link rel="stylesheet" href="../../resources/css/planets.css">
+    <title>Mars</title>
+    <script src="../../resources/js/menu.js"></script>
+    <script src="../../resources/js/planet.js"></script>
+
+    <link rel="icon" type="image/png" href="../../resources/img/favicon.png" />
+
+</head>
+
+<body>
+    <div id="popup" style="position:absolute;padding:5px;background-color:white;border:1px solid black;z-index:30;">CO2, Argon, Nitrogen, Oxygen, Carbon Monoxide, Water Vapor</div>
+    
+    <!-- Leave Button -->
+    <div class="center" style="position: absolute; z-index: 50;">
+        <a href="character.html"> 
+            <button id="leave" class='leaveBtn'>
+            LEAVE
+            </button>
+        </a>          
+    </div>
+    
+    <!-- Inhabit Button -->
+    <div class="center" style="position: absolute; z-index: 50;">
+        <a href="character.html"> 
+            <button id="inhabit" class='inhabitBtn'>
+            INHABIT
+            </button>
+        </a>          
+    </div>
+
+    <!-- Starry Background -->
+    <div id='stars'></div>
+
+    <!-- Logo -->
+    <a href="Index.html"><img style="margin-top: 1%; width: 5.5%; height: auto; position: relative; z-index: 50;" class="logo"
+            src="../../resources/img/favicon.png" alt="" /></a>
+
+    <!-- Menu Button -->
+    <div id="menu" class="menuPopup">
+
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <!-- Overlay content -->
+        <div class="menuPopup-content">
+            <a href="Index.html">HOME</a>
+            <a href="character.html">PLAY</a>
+            <a href="about.html">ABOUT</a>
+            <a href="qa.html">SOURCES</a>
+            <a href="qa.html">Q&A</a>
+        </div>
+
+    </div>
+
+    <button class="menuBtn" onclick="openNav()" style="margin: 2.35% 0 0 85.68%; position: absolute; margin: translate(-70%, -780%); z-index: 50;"><i class="fa fa-bars"></i></button>
+
+    <!-- Title Text -->
+    <section class="container">
+
+        <div class="center qaAndAboutTitle" style="margin-top: -100%">
+            <p>Mars</p>
+        </div>
+
+    </section>
+
+    <div class="popupContainer" onclick="togglePopup()"> 
+    <img class="rockPic" src="../../resources/img/rock.png" alt="Rock Image" id="rockImage" onclick="showPopup()" style="cursor:pointer;">
+       <span class="popuptext" id="myPopup">ROCK YAY</span>
+    </div>
+
+    <!-- Background Image -->
+    <img style="width: 100%; height: auto;" class="bkgPic" src="../../resources/img/mars.png" />
+
+
+<script>
+document.addEventListener('click', function(event) {
+    var rockImg = document.getElementById('rockImage');
+    var popup = document.getElementById('popup');
+    var leavebtnId = document.getElementById('');
+    var target = event.target;
+
+    // Check if the click is on the rock image or the popup itself
+    if (target == rockImg || target == popup) {
+        if (popup.style.display === 'block') {
+            popup.style.display = 'none';
+        } else {
+            // Calculating position for the popup
+            var rect = rockImg.getBoundingClientRect();
+            popup.style.top = (rect.top - 10) + 'px';  // 10px above the rock
+            popup.style.left = rect.left + 'px';
+            
+            // Making the popup visible
+            popup.style.display = 'block';
+            event.preventDefault();  // Prevent any default action to ensure popup functionality
+        }
+    } else {
+        // Hide the popup if the click is outside of the popup and the rock image
+        popup.style.display = 'none';
+    }
+});
+</script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.getElementById('leave').addEventListener('click', (e) => {
+            e.preventDefault();
+            const popup = document.createElement('div');
+            popup.style.position = 'fixed';
+            popup.style.top = '50%';
+            popup.style.left = '50%';
+            popup.style.transform = 'translate(-50%, -50%)';
+            popup.style.backgroundColor = 'white';
+            popup.style.border = '3px solid black';
+            popup.style.padding = '20px';
+            popup.style.zIndex = '1000';
+            popup.style.fontSize = '24px';
+            popup.style.textAlign = 'center';
+            popup.innerText = 'WRONG!';
+            document.body.appendChild(popup);
+        });
+    });
+</script>
+</body>
+
+</html>

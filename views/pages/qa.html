@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <!-- Exernal Resources -->
+    <!-- Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Custom CSS and JS -->
+    <link rel="stylesheet" href="../../resources/css/homePage.css">
+    <link rel="stylesheet" href="../../resources/css/playBtn.css">
+    <link rel="stylesheet" href="../../resources/css/menu.css">
+    <link rel="stylesheet" href="../../resources/css/starryBkg.css">
+    <link rel="stylesheet" href="../../resources/css/Q and A.css">
+    <link rel="stylesheet" href="../../resources/css/planets.css">
+    <title>Q&A Dropdown</title>
+    <script src="../../resources/js/menu.js"></script>
+
+    <link rel="icon" type="image/png" href="../../resources/img/favicon.png" />
+
+  </head>
+
+  <!-- Starry Background -->
+  <div id='stars'></div>
+
+  <!-- Logo -->
+  <a href="Index.html"><img style="margin-top: 1%; width: 5.5%; height: auto;" class="logo" src="../../resources/img/favicon.png" alt="" /></a>
+
+  <!-- Menu Button -->
+  <div id="menu" class="menuPopup">
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    
+    <!-- Overlay content -->
+    <div class="menuPopup-content">
+      <a href="Index.html">HOME</a>
+      <a href="character.html">PLAY</a>
+      <a href="about.html">ABOUT</a>
+      <a href="qa.html">SOURCES</a>
+      <a href="qa.html">Q&A</a>
+    </div>
+    
+  </div>
+    
+  <button class="menuBtn" onclick="openNav()" style="margin: 45px 0 0 1650px;"><i class="fa fa-bars"></i></button>
+
+  <!-- Title Text -->
+  <section class="container">
+
+    <div class="center qaAndAboutTitle" style="margin-top: -383px">
+      <p>Q&A</p>
+    </div>
+
+  </section>
+
+  <!--Q and A dropdown-->
+  <div class="qandAContainer">
+    <button style="color: var(--accentGlow); font-size: 22px; margin-top: 2%;" type="button" class="center collapsible">Is there customer support available, and how can users get assistance?</button>
+    <div class="content center">
+      <p>Yes, the way users can get support is by reaching out to our support team. Email bahah1818@protonmail.com for questions or concerns and our support team will reach out as soon as possible. </p>
+    </div>
+
+    <button style="color: var(--accentGlow); font-size: 22px; margin-top: 1%;" type="button" class="center collapsible">Are there any upcoming features or developments planned for this website?</button>
+    <div class="content center">
+      <p>Yes, our team is always updating our site to provide users with the most current up-to-date versions. </p>
+    </div>
+    
+    <button style="color: var(--accentGlow); font-size: 22px;margin-top: 1%;" type="button" class="center collapsible">Can I use this website on my mobile device?</button>
+    <div class="content center">
+      <p>Yes, you can use this website on any device. </p>
+    </div>
+
+    <button style="color: var(--accentGlow); font-size: 22px;margin-top: 1%;" type="button" class="center collapsible">What inspired the launch of this game?</button>
+    <div class="content center">
+      <p>What started as a college astronomy project turned into an educational game for everyone to experience.</p>
+    </div>
+
+    <button style="color: var(--accentGlow); font-size: 22px;margin-top: 1%;" type="button" class="center collapsible">Is my personal information safe on this website?</button>
+    <div class="content center">
+      <p> Yes, all your personal information is safe. Our security team has done an excellent job in ensuring our communities safety. </p>
+    </div>
+  </div>
+
+</html>
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+    
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    }); 
+  }    
+</script>

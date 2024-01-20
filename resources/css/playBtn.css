@@ -1,0 +1,117 @@
+/* Flickering retro-style button */
+
+.buttonLocation {
+  margin-top: -290px;
+}
+
+.playBtn {
+  /* Styling the text: */
+  font-size: 35px;
+  font-weight: 750;
+  letter-spacing: 25px; 
+  color: var(--mainGlow);
+  font-family: var(--font);
+  z-index: 40;
+
+  border-radius: 10px;  /* Adds curve to border corners */
+ 
+  border: 3.75px solid var(--mainGlow); /* Border thickness, line style, color*/
+  perspective: 60px;
+  
+  box-shadow: inset 0px 0px 10px 0px var(--mainGlow),
+    0px 0px 10px 0px var(--mainGlow);
+  
+  margin-top: 15px;
+  background: none; 
+  cursor: pointer; 
+  position: relative;
+  padding: 13px 42px;
+  animation: border-flicker 2s linear infinite; 
+}
+/* starts animation for glowing-txt */
+.glowing-txt {
+  margin-right: -32px;
+  animation: text-flicker 3s linear infinite; 
+}
+/* starts animation for faulty-letter */
+.faulty-letter {
+  opacity: 0.5;
+  animation: faulty-flicker 3s linear infinite;
+}
+/* Button before hover */
+.playBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.7;
+  filter: blur(40px);
+  transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+  background: var(--mainGlow);
+  pointer-events: none;
+}
+/* Button after hover */
+.playBtn::after {
+  content: "";
+  position: absolute;
+  border-radius: 5px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+  box-shadow: 0 0 32px 3.2px var(--mainGlow);
+  transition: opacity 100ms linear;
+}
+/* button on hover */
+.playBtn:hover {
+  color: var(--mainGlow);
+  animation: none;
+  transition: 0.4s;
+}
+/* glowing-txt on hover */
+.playBtn:hover .glowing-txt  {
+  animation: none;
+}
+/* faulty-letter on hover */
+.playBtn:hover .faulty-letter {
+  opacity: 1;
+  animation: none;
+}
+/* What happens after you hover */
+.playBtn:hover:after {
+  opacity: 1;
+}
+
+/* Animation that changes opacity at these following times: */
+@keyframes faulty-flicker {
+  0%, 15%, 80%, 87%, 100% {
+    opacity: 0.1;
+  }
+
+  12%, 20%, 85% {
+    opacity: 1;
+  }
+}
+  
+@keyframes text-flicker {
+    0%, 68%, 100% {
+      opacity: 0.5;
+    }
+    9%, 67%,  77% {
+      opacity: 1;
+    }
+    
+}
+  
+@keyframes border-flicker {
+    0%, 4% {
+      opacity: 0.7;
+    }
+    2%, 8%, 100% {
+      opacity: 1;
+    }
+}

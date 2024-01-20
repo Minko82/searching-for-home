@@ -1,0 +1,55 @@
+:root {
+  --mainGlow: #FF0204;
+  --accentGlow: #FFAA00;
+  --textColor: #e7ebee;
+  --font: 'Courier New', Courier, monospace;
+}
+
+html {
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 0%);
+  overflow: hidden;
+  font-family: var(--font);
+}
+
+.container {
+  position: fixed;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center {
+  margin: auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.homePageTitleBig {
+  color: var(--textColor); 
+  font-size: 30ch;
+  margin-top: -345px;
+  font-weight:300;
+  text-shadow: var(--accentGlow) 1px 0 13px;
+}
+
+.homePageTitleMed {
+  color:var(--textColor);
+  font-size: 8.75ch;
+  margin-top: 180px;
+}
+
+.qaAndAboutTitle {
+  color:var(--textColor);
+  font-size: 8ch;
+  margin-top: -370px;
+  font-weight:300;
+  text-shadow: var(--mainGlow) 1px 0 13px;
+}
+
+.logo{
+  width: 100px;
+  height: auto;
+  margin-left: 50px;  
+  position: relative;  
+  z-index: 30;
+}
