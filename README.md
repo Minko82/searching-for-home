@@ -1,6 +1,8 @@
 # Searching-For-Home
 ## Introduction
+
 Thank you for joining us on this cosmic journey! Our goal is to spark curiosity about the possibilities of life beyond our planet. This web game lets you explore the wonders of the universe through four unique characters, each with their own special traits and abilities.
+
 ![pg1](https://github.com/user-attachments/assets/f7206241-491f-4403-ab2b-940384b44ea6)
 ---
 ![pg3](https://github.com/user-attachments/assets/c16b711d-88cf-45b3-877c-0c5410c7896a)
