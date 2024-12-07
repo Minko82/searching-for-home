@@ -7,6 +7,8 @@ Thank you for joining us on this cosmic journey! Our goal is to spark curiosity 
 ---
 ![pg3](https://github.com/user-attachments/assets/c16b711d-88cf-45b3-877c-0c5410c7896a)
 
+---
+
 ## Game Overview
 In this game, you can select to play as one of the following characters:
 
@@ -18,6 +20,8 @@ In this game, you can select to play as one of the following characters:
 Your goal is to explore the different planets to find the most scientifically suitable home!
 Each character comes with its own set of abilities and interactions, making the game an exciting exploration of life and ecosystems.
 ![pg2](https://github.com/user-attachments/assets/763d7886-9789-4eb4-85ff-d753451c2310)
+
+---
 
 ## Technologies/Tools:
 ### Front-end:
@@ -33,6 +37,7 @@ Each character comes with its own set of abilities and interactions, making the 
 - Photoshop
 - Figma
 
+---
 
 ## Sources:
 - https://www.tutorialspoint.com/chemotrophs
