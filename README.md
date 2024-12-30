@@ -2,9 +2,10 @@
 
 ## 🪐 **Project Description**
 
-Welcome to *Searching for Home*! Embark on a cosmic journey to explore the universe and spark curiosity about the possibilities of life beyond our planet. 
 
-This web game invites players to dive into the wonders of the cosmos with four unique characters, each possessing special traits and abilities. Your mission: to discover scientifically suitable planets for your chosen character!
+This web game lets players explore the cosmos with four unique characters, each seeking a scientifically suitable planet!
+
+Welcome to *Searching for Home*! Embark on a cosmic journey to explore the universe and spark curiosity about the possibilities of life beyond our planet. 
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/f7206241-491f-4403-ab2b-940384b44ea6" alt="Game Screenshot 1" width="700">
