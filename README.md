@@ -23,7 +23,7 @@ Choose your character and explore the stars to find the perfect planetary home. 
 - 💧 **Hydro GenZ**: A young, hip hydrogen bacteria (chemoautotroph).  
 - 👑 **Cleocatra**: The feline queen of the cosmos (chemoheterotroph).  
 
-### 🧩 **Objective**  
+#### 🧩 **Objective**  
 Explore planets, analyze ecosystems, and uncover which environments best match your character's unique metabolic needs. Every playthrough is a fresh adventure into the mysteries of the universe!
 
 <p align="center">
@@ -36,22 +36,42 @@ Explore planets, analyze ecosystems, and uncover which environments best match y
 
 ## 💻 **Technologies and Tools**
 
-### **Front-End Development**
+#### **Front-End Development**
 - HTML  
 - CSS  
 - JavaScript  
 
-### **Version Control**
+#### **Version Control**
 - Git  
 
-### **Design**
+#### **Design**
 - Illustrator  
 - Photoshop  
 - Figma  
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/c16b711d-88cf-45b3-877c-0c5410c7896a" alt="Game Screenshot 3" width="700">
-</p>
+<br>
+
+---
+
+## 🚀 How to Use
+
+Follow these steps to view and run the **Searching-For-Home** project locally:
+
+---
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Minko82/Searching-For-Home.git
+   cd Searching-For-Home
+   ```
+2. Open the index.html file in your preferred web browser:
+   - Navigate to the following:
+     <p align="center">Searching-For-Home ➜ views ➜ pages ➜ index.html</p>
+   
+   - Simply double-click on the index.html file or right-click and select _Open With_ to view it in your browser.
+     
+
+
 
 <br>
 
